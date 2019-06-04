@@ -1,0 +1,21 @@
+- Logged onto default WRT web gui
+- Went to Connectivity tab and then loaded predownloaded OpenWRT firmware
+(http://downloads.openwrt.org/releases/18.06.2/targets/mvebu/cortexa9/openwrt-18.06.2-mvebu-cortexa9-linksys-wrt1900ac-squashfs-factory.img)
+- Flashed image onto router
+	- To reset download default firmware from here(http://downloads.linksys.com/downloads/firmware/FW_WRT1900AC_1.1.10.187766_prod.img)
+- Reboot and then log onto router 192.168.1.1
+- User: root Password: (blank)
+- Config OpenWRT
+
+To install YAMON
+- SSH into router using ssh root@192.168.1.1
+- Make a /opt/ folder inside of root
+- Download Yamon here (http://usage-monitoring.com/current/YAMon3/install%20(3.4.7).zip) onto computer
+- Unzip file
+- SCP file into router using this command scp (file) root@192.168.1.1:/opt/
+- Give install.sh file executable permissions using this command 
+	- chmod a+x install.sh
+- Run the bash script using this command
+	- ./install.sh
+- Go through install wizard and install Yamon
+- After you finish you can go to 192.168.1.1/Yamon to access Yamon's web interface or whatever you set Yamon's home address to be
